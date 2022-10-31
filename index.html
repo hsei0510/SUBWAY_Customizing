@@ -35,18 +35,19 @@
         </div>
         <div class="inner">
           <ul id="gnb">
-            <li><a href="#">메뉴소개</a></li>
-            <li><a href="#">이용방법</a></li>
-            <li><a href="#">새소식</a></li>
-            <li><a href="#">써브웨이</a></li>
-            <li><a href="#">가맹점</a></li>
-            <li><a href="#">온라인 주문</a></li>
+            <li><a href="#" class="fromCenter">메뉴소개</a></li>
+            <li><a href="#" class="fromCenter">이용방법</a></li>
+            <li><a href="#" class="fromCenter">새소식</a></li>
+            <li><a href="#" class="fromCenter">써브웨이</a></li>
+            <li><a href="#" class="fromCenter">가맹점</a></li>
+            <li><a href="#" class="fromCenter">온라인 주문</a></li>
           </ul>
           <ul id="login-menu">
             <!-- <li><a href="#">로그인</a></li>
               <li><a href="#">회원가입</a></li> -->
-            <li><a href="#">로그아웃</a></li>
-            <li><a href="#" class="cart">회원가입<span class="count"></span> </a></li>
+            <li><a href="#" class="fromCenter">로그아웃</a></li>
+            <li><a href="#" class="fromCenter">회원가입</a></li>
+            <li><a href="#" class="cart"><span class="count"></span></a></li>
           </ul>
         </div>
       </header>
@@ -301,7 +302,7 @@
        },
        on: { //얘가 작동되는 중간시점에 이 행위를 하겠다.
            slideChangeTransitionEnd: function(){ //함수타입임
-             console.log(this.realIndex);
+             // console.log(this.realIndex);
              var thisActive = this.activeIndex;
              var thisRealIndex = this.realIndex;
            }
