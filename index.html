@@ -290,24 +290,34 @@
 
    <!-- Initialize Swiper -->
    <script>
-     var swiper = new Swiper(".mySwiper", {
-      loop: true, // 무한 반복
-      autoplay: { // 자동 플레이
-         delay: 2500 // 기준 ms 2500ms -> 2.5초
-       },
-       direction: "vertical",
-       pagination: {
-         el: ".swiper-pagination",
-         clickable: true,
-       },
-       on: { //얘가 작동되는 중간시점에 이 행위를 하겠다.
-           slideChangeTransitionEnd: function(){ //함수타입임
-             // console.log(this.realIndex);
-             var thisActive = this.activeIndex;
-             var thisRealIndex = this.realIndex;
-           }
-         }
-     });
+   var swiper = new Swiper(".mySwiper", {
+    loop: true, // 무한 반복
+    autoplay: { // 자동 플레이
+       delay: 2500, // 기준 ms 2500ms -> 2.5초
+       disableOnInteraction: false,
+     },
+     direction: "vertical",
+     pagination: {
+       el: ".swiper-pagination",
+       clickable: true,
+     },
+   });
+
+   let $slides = document.querySelectorAll('.swiper-slide');
+    for (let i of $slides) {
+      i.addEventListener('mouseover', function(){
+        swiper.autoplay.stop();
+      });
+      i.addEventListener('mouseout', function(){
+        swiper.autoplay.start();
+      });
+    }
+   // jquery로 작동하게하긴
+   // $('.swiper-slide').hover(function(){
+   //    swiper.autoplay.stop();
+   //  }, function(){
+   //    swiper.autoplay.start();
+   //  });
    </script>
 </body>
 

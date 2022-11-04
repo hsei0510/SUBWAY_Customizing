@@ -212,16 +212,16 @@ h1,h2,h3,h4,h5,h6 { line-height: 1; }
   background-color: #f9f9f9;
 }
 #container section:nth-of-type(1) .inner {
-  padding-top: 165px;
+  padding-top: 130px;
   min-height: 485px;
 }
 #container section:nth-of-type(2) .inner {
-  padding-top: 120px;
+  padding-top: 130px;
   min-height: 505px;
 }
 #container section:nth-of-type(7) .inner {
-  padding: 50px 0px;
-  min-height: 300px;
+  /* padding: 50px 0px; */
+  min-height: 450px;
 }
 
 /* section 공통요소 style*/
@@ -260,13 +260,18 @@ h1,h2,h3,h4,h5,h6 { line-height: 1; }
   display: flex;
   align-items: center;
   justify-content:center;
+  margin-top: 100px;
 }
 #container section .inner .box-wrap li {
   /* float: left;
   width: calc(25% - 40px); */
+  /* background-color: #f1f1f1; */
+  flex-basis: 25%;
+  margin: 0 10px;
+  border-radius: 30px;
 }
 #container section .inner .box-wrap li .items {
-  padding: 30px 60px;
+  /* padding: 30px 60px; */
   transition: 0.3s;
 }
 #container section .inner .box-wrap li .items:hover {
