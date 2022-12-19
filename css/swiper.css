@@ -53,3 +53,7 @@
       .swiper-pagination-vertical.swiper-pagination-bullets, .swiper-vertical>.swiper-pagination-bullets {
         right: 30px;
       }
+
+      .swiper-slide img {
+        cursor: pointer;
+      }
